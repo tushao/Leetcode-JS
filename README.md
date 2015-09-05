@@ -1,2 +1,2 @@
 # Leetcode-JS
-This is my code for Leetcode solution with JS
+There is my solution for Leetcode algorithms with JS
