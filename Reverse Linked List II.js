@@ -31,7 +31,7 @@ var reverseBetween = function(head, m, n) {
     var mNode = head.next;
     var nNode = mNode;
     var postnNode = mNode.next;
-    for(i = m; i < n; i++) {//研究下这里为什么这么写
+    for(i = m; i < n; i++) {//带有返回值的函数:在使用 return 语句时，函数会停止执行，并返回指定的值。
         if (postnNode === null) {
             return null;
         }
@@ -46,3 +46,6 @@ var reverseBetween = function(head, m, n) {
     return dummy.next;
     
 };
+
+//“===”首先计算其操作数的值，然后比较这两个值，比较过程没有任何类型转换
+//相等运算符“==”如果两个操作数不是同一类型，那么相等运算符会尝试一些类型转换，然后进行比较
