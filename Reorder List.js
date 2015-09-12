@@ -13,12 +13,10 @@
 //把数组分成两个数组(快慢指针)
 function findMiddle(head) {
     var slow = head;
-    if (head !== null) {
         var fast = head.next;
     while(fast !== null && fast.next !== null) {
         slow = slow.next;
         fast = fast.next.next;
-    }
     }
     return slow;
 }
@@ -65,15 +63,15 @@ function merge(head1, head2) {
 }
 // 主函数
 var reorderList = function(head) {
-    var mid = findMiddle(head);
-    if (mid !== null) {
+    //very important!
+    if (head === null || head.next === null) {
+            return;
+        }
+
+        var mid = findMiddle(head);
         var tail = reverse(mid.next);
+        mid.next = null;//very important!
+
         merge(head, tail);
-    }
-    else {
-        merge(head, null)
-    }
-    //mid.next = null;
-    
     
 };
