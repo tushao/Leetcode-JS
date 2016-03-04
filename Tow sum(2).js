@@ -3,6 +3,8 @@
  * @param {number} target
  * @return {number[]}
  */
+
+ //completed by hashmap
 var twoSum = function(nums, target) {
    var result = [];
    var hash = new Map();
